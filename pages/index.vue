@@ -1,7 +1,8 @@
 <template>
   <div class="text-center py-16">
     <h1 class="text-4xl font-bold mb-4">今天吃什么？</h1>
-    <p class="text-gray-600 dark:text-gray-400 mb-8">点击下面的按钮，让我来帮你决定！</p>
+    <p class="text-gray-600 dark:text-gray-400 mb-8">点击下面的按钮，然后再决定吧！</p>
+    <p class="text-gray-600 dark:text-gray-400 mb-8">注意：阿黄对结果概不负责（诶嘿）</p>
     
     <div class="my-10">
       <button 

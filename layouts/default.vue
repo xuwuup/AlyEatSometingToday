@@ -3,11 +3,11 @@
     <header class="bg-white dark:bg-gray-800 shadow-md">
       <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
         <NuxtLink to="/" class="text-xl font-bold text-green-600 dark:text-green-400">
-          吃啥呢?
+          艾力今天吃啥呢?
         </NuxtLink>
         <div class="space-x-4">
           <NuxtLink to="/" class="text-gray-600 dark:text-gray-300 hover:text-green-600">
-            帮我决定
+            
           </NuxtLink>
           <NuxtLink to="/foods" class="text-gray-600 dark:text-gray-300 hover:text-green-600">
             我的食物
