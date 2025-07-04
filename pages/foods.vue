@@ -12,11 +12,11 @@
           placeholder="食物名称 (如: 黄焖鸡米饭)" 
           class="flex-grow p-2 border rounded bg-gray-50 dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"
         >
-        <input 
-          v-model="newFoodTags" 
-          type="text" 
-          placeholder="标签 (用逗号或空格隔开)" 
-          class="flex-grow p-2 border rounded bg-gray-50 dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+        <input
+          v-model="newFoodDesc"
+          type="text"
+          placeholder="描述 (如：加辣/不加香菜/推荐理由等)"
+          class="flex-grow p-2 border rounded bg-gray-50 dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
         >
         <button 
           type="submit" 
@@ -36,11 +36,7 @@
       >
         <div>
           <h3 class="font-bold">{{ food.name }}</h3>
-          <div class="flex flex-wrap gap-1 mt-2">
-            <span v-for="tag in food.tags" :key="tag" class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-1 rounded-full">
-              {{ tag }}
-            </span>
-          </div>
+          
         </div>
         <button @click="mainStore.deleteFood(food.id)" class="text-red-500 hover:text-red-700">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,14 +57,12 @@ import { ref } from 'vue';
 import { useMainStore } from '~/stores/main';
 
 const mainStore = useMainStore();
-
 const newFoodName = ref('');
-const newFoodTags = ref('');
+const newFoodDesc = ref('');
 
 function handleAddFood() {
-  mainStore.addFood(newFoodName.value, newFoodTags.value);
-  // 清空输入框
+  mainStore.addFood(newFoodName.value, newFoodDesc.value);
   newFoodName.value = '';
-  newFoodTags.value = '';
+  newFoodDesc.value = '';
 }
 </script>
